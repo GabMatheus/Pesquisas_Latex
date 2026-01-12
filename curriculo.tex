@@ -1,0 +1,161 @@
+%----------------------------------------------------------------------------------------
+%	CONFIGURAÇÃO DO DOCUMENTO
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}	
+\usepackage[utf8]{inputenc}		
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+\usepackage[a4paper, margin=1.5cm, top=1.2cm, bottom=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+% Definição de Cores
+\definecolor{sectcol}{RGB}{0,100,200} % Azul profissional
+\definecolor{textcol}{RGB}{50,50,50}
+\definecolor{lightgray}{RGB}{120,120,120}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=sectcol,
+    pdfauthor={Gabriel Matheus Oliveira},
+    pdftitle={Currículo - Gabriel Matheus Oliveira}
+}
+
+% Ajuste de parágrafo e espaçamento
+\setlength{\parindent}{0mm}
+\setlist[itemize]{nosep, leftmargin=1em, labelsep=0.5em} % Listas compactas
+
+%----------------------------------------------------------------------------------------
+%	COMANDOS CUSTOMIZADOS
+%----------------------------------------------------------------------------------------
+
+% Seção estilizada
+\newcommand{\cvsection}[1]{
+    \vspace{12pt}
+    {\large\textcolor{sectcol}{\textbf{\MakeUppercase{#1}}}}
+    \vspace{2pt}
+    \hrule height 0.5pt \relax
+    \vspace{6pt}
+}
+
+% Evento de experiência/formação
+% Uso: \cvevent{data}{cargo}{empresa}{descrição}
+\newcommand{\cvevent}[4]{
+    \noindent \textbf{#2} \hfill \textcolor{sectcol}{\small \faCalendar* #1} \\
+    \noindent \textit{\textcolor{lightgray}{#3}} \vspace{4pt} \\
+    {#4} \vspace{8pt}
+}
+
+%----------------------------------------------------------------------------------------
+%	INÍCIO DO DOCUMENTO
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%--- CABEÇALHO ---
+\begin{center}
+    {\Huge \textbf{GABRIEL MATHEUS OLIVEIRA}} \\
+    \vspace{6pt}
+    {\color{sectcol} \large \faCode \ Analista de Sistemas e Desenvolvedor} \\
+    \vspace{10pt}
+    
+    \small
+    \faMapMarker* Uberaba -- MG \quad 
+    \faPhone* (34) 99289-1596 \quad 
+    \faEnvelope \ \href{mailto:gab_matheus@hotmail.com}{gab\_matheus@hotmail.com} \\
+    \vspace{4pt}
+    \faLinkedin \ \href{https://linkedin.com/in/oliveiragm}{linkedin.com/in/oliveiragm} \quad 
+    \faGithub \ \href{https://github.com/GabMatheus}{github.com/GabMatheus} \quad 
+    \faGlobe \ \href{https://gabmatheus.github.io/Portifolio/}{Portfólio}
+\end{center}
+
+%--- RESUMO ---
+\cvsection{Resumo Profissional}
+Analista de Sistemas com mais de quatro anos de experiência, atuando no desenvolvimento de aplicações, 
+automação de processos e análise de dados. Experiência com SQL e Python na construção de rotinas 
+ETL, administração de bancos de dados e geração de informações para apoio à tomada de decisão, além 
+de integração de sistemas e suporte a ambientes corporativos de TI.
+
+%--- EXPERIÊNCIA ---
+\cvsection{Experiência Profissional}
+
+\cvevent{06/2021 – 10/2025}{Analista de Sistemas}{CONEFI LTDA}{
+\begin{itemize}
+    \item Desenvolvimento e manutenção de aplicações internas e automação de pipelines ETL com Python.
+    \item Extração, tratamento e análise de dados (SQL/Python) para geração de insights operacionais.
+    \item Administração de bancos de dados relacionais e modelagem de dados.
+    \item Suporte técnico especializado a sistemas ERP (EMSys3, AutoSystem) e manutenção da infraestrutura do departamento de TI da empresa.
+     \item Automação de processos e atividades rotineiras com Python.
+\end{itemize}
+}
+
+\cvevent{09/2014 – 11/2016}{Estágio em Engenharia/TI}{TV Integração (Afiliada Rede Globo)}{
+\begin{itemize}
+    \item Suporte técnico em sistemas de transmissão e manutenção de infraestrutura de redes.
+    \item Operação e suporte a usuários.
+\end{itemize}
+}
+
+%--- FORMAÇÃO ---
+\cvsection{Formação Acadêmica}
+
+\cvevent{Previsão 06/2026}{Análise e Desenvolvimento de Sistemas}{UFV / UNINTER}{
+Disciplinas abrangendo programação, banco de dados, programação orientada a objetos, engenharia de software, gestão de projetos e análise de sistemas
+}
+
+\cvevent{Concluído}{Técnico em Eletrônica}{CEFET-MG}{
+Especialização em sistemas embarcados, microcontroladores e circuitos digitais.
+}
+
+%--- HABILIDADES ---
+\cvsection{Habilidades Técnicas}
+
+\begin{multicols}{2}
+    \textbf{\faDatabase \ Dados \& Backend}
+    \begin{itemize}
+        \item SQL (PostgreSQL, MySQL, SQL Server)
+        \item Python (ETL, Pandas, Automação)
+        \item APIs REST (Flask, Postman)
+        \item Web Scraping & Noções de IA
+    \end{itemize}
+
+    \columnbreak
+
+    \textbf{\faLaptopCode \ Desenvolvimento \& Infra}
+    \begin{itemize}
+        \item Git, Linux, JSON/XML
+        \item HTML, CSS, JavaScript (React)
+        \item Metodologias Ágeis (Scrum)
+        \item Princípios SOLID
+        \item ERPs (EMSys3, AutoSystem, Domínio)
+    \end{itemize}
+\end{multicols}
+
+%--- CURSOS E EXTRAS ---
+\cvsection{Cursos e Certificações}
+\cvevent{2023}{Inglês Geral (Nível B2)}{OSCARS International -- Dublin/Irlanda}{
+Intercâmbio de 6 meses com foco em proficiência comunicativa em ambiente internacional.
+}
+\\\\\\\\\\\\\\\\
+%--- PUBLICAÇÕES ---
+\cvsection{Publicações}
+\cvevent{2021}{Artigos Técnicos em Sistemas de Informação}{Produção Acadêmica}{
+\begin{itemize}
+    \item Pesquisas sobre qualidade de software, arquitetura de componentes e GPUs.
+    \item \faGithub \ \href{https://github.com/GabMatheus/Pesquisas_Latex}{Repositório com os artigos}
+\end{itemize}
+}
+
+%--- REFERÊNCIAS ---
+\cvsection{Referências Profissionais}
+\begin{itemize}[label=\faUserCheck, leftmargin=1.5em]
+    \item \textbf{Bruno Lopes} | Gerente de Operações, Postos Alpa | (34) 98802-3389
+    \item \textbf{Thiago Matias} | Coordenador de TI, Conefi | (34) 98848-9918
+\end{itemize}
+
+\vfill
+\center{\footnotesize \textcolor{lightgray}{Documento gerado em \LaTeX \ | Disponível para validação via GitHub.}}
+
+\end{document}
