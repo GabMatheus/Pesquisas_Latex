@@ -1,0 +1,159 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATION
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}	
+\usepackage[utf8]{inputenc}		
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+\usepackage[a4paper, margin=1.5cm, top=1.2cm, bottom=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+% Color Definitions
+\definecolor{sectcol}{RGB}{0,100,200} % Professional Blue
+\definecolor{textcol}{RGB}{50,50,50}
+\definecolor{lightgray}{RGB}{120,120,120}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=sectcol,
+    pdfauthor={Gabriel Matheus Oliveira},
+    pdftitle={Resume - Gabriel Matheus Oliveira}
+}
+
+% Paragraph and Spacing Adjustments
+\setlength{\parindent}{0mm}
+\setlist[itemize]{nosep, leftmargin=1em, labelsep=0.5em} 
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+% Styled Section
+\newcommand{\cvsection}[1]{
+    \vspace{12pt}
+    {\large\textcolor{sectcol}{\textbf{\MakeUppercase{#1}}}}
+    \vspace{2pt}
+    \hrule height 0.5pt \relax
+    \vspace{6pt}
+}
+
+% Experience/Education Event
+\newcommand{\cvevent}[4]{
+    \noindent \textbf{#2} \hfill \textcolor{sectcol}{\small \faCalendar* #1} \\
+    \noindent \textit{\textcolor{lightgray}{#3}} \vspace{4pt} \\
+    {#4} \vspace{8pt}
+}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%--- HEADER ---
+\begin{center}
+    {\Huge \textbf{GABRIEL MATHEUS OLIVEIRA}} \\
+    \vspace{6pt}
+    {\color{sectcol} \large \faTools \ Systems Analyst | Technical Support Engineer} \\
+    \vspace{10pt}
+    
+    \small
+    \faMapMarker* Uberaba, Brazil
+    \quad 
+    \faPhone* +55 (34) 99289-1596 \quad 
+    \faEnvelope \ \href{mailto:gab_matheus@hotmail.com}{gab\_matheus@hotmail.com} \\
+    \vspace{4pt}
+    \faLinkedin \ \href{https://linkedin.com/in/oliveiragm}{linkedin.com/in/oliveiragm} \quad 
+    \faGithub \ \href{https://github.com/GabMatheus}{github.com/GabMatheus} \quad 
+    \faGlobe \ \href{https://gabmatheus.github.io/Portifolio/}{Portfolio}
+\end{center}
+
+%--- SUMMARY ---
+\cvsection{Professional Summary}
+Systems Analyst with over five years of experience in technical support, software development, and data analysis. Proven track record in troubleshooting complex ERP systems, automating processes with Python, and managing SQL databases. Strong communicator with international experience (Dublin, Ireland), dedicated to resolving technical issues and optimizing IT infrastructure to support business goals.
+
+%--- EXPERIENCE ---
+\cvsection{Professional Experience}
+
+\cvevent{06/2021 – 10/2025}{Systems Analyst/Technical Support}{CONEFI LTDA}{
+\begin{itemize}
+    \item Provided specialized Tier 2/3 technical support for ERP systems (EMSys3, AutoSystem) and corporate IT infrastructure.
+    \item Developed and maintained internal applications and automated ETL pipelines using Python to streamline operations.
+    \item Performed data extraction, cleaning, and analysis (SQL/Python) to generate operational insights and support decision-making.
+    \item Managed and modeled relational databases (PostgreSQL/SQL Server), ensuring data integrity and performance.
+    \item Automated routine manual tasks and workflows, reducing response times and human error.
+\end{itemize}
+}
+
+\cvevent{09/2014 – 11/2016}{IT \& Engineering Intern}{TV Integração (Rede Globo Affiliate)}{
+\begin{itemize}
+    \item Delivered technical support for broadcasting systems and maintained network infrastructure.
+    \item Handled end-user support (Help Desk), troubleshooting hardware, software, and connectivity issues.
+    \item Monitored system performance and assisted in preventive maintenance of technical equipment.
+\end{itemize}
+}
+
+%--- EDUCATION ---
+\cvsection{Education}
+
+\cvevent{Expected 06/2026}{B.S. in Systems Analysis and Development}{UNINTER}{
+Relevant Coursework: Software Engineering, Database Management, Object-Oriented Programming (OOP), System Analysis, and Project Management.
+}
+
+\cvevent{Completed}{Associate Degree in Electronics}{CEFET-MG}{
+Focus on embedded systems, microcontrollers, and digital circuits.
+}
+
+%--- SKILLS ---
+\cvsection{Technical Skills}
+
+\begin{multicols}{2}
+    \textbf{\faDatabase \ Data \& Backend}
+    \begin{itemize}
+        \item SQL (PostgreSQL, MySQL, SQL Server)
+        \item Python (ETL, Pandas, Automation)
+        \item REST APIs (Flask, Postman)
+        \item Web Scraping \& AI Fundamentals
+    \end{itemize}
+
+    \columnbreak
+
+    \textbf{\faLaptopCode \ Development \& IT Ops}
+    \begin{itemize}
+        \item Git, Linux, JSON/XML
+        \item HTML, CSS, JavaScript (React)
+        \item Agile Methodologies (Scrum)
+        \item ERP Support (EMSys3, AutoSystem, Domínio)
+        \item Troubleshooting \& Technical Support
+    \end{itemize}
+\end{multicols}
+
+%--- COURSES AND EXTRAS ---
+\cvsection{Languages \& Certifications}
+\cvevent{2019}{General English (B2 Upper-Intermediate)}{OSCARS International -- Dublin, Ireland}{
+6-month immersive exchange program focused on professional communication and fluency in an international environment.
+}
+
+%--- PUBLICATIONS ---
+\cvsection{Publications}
+\cvevent{2021}{Technical Articles in Information Systems}{Academic Production}{
+\begin{itemize}
+    \item Research on software quality, component architecture, and GPU performance.
+    \item \faGithub \ \href{https://github.com/GabMatheus/Pesquisas_Latex}{Repository with full articles}
+\end{itemize}
+}
+
+%--- REFERENCES ---
+\cvsection{Professional References}
+\begin{itemize}[label=\faUserCheck, leftmargin=1.5em]
+    \item \textbf{Bruno Lopes} | Operations Manager, Postos Alpa | +55 (34) 98802-3389
+    \item \textbf{Thiago Matias} | IT Coordinator, Conefi | +55 (34) 98848-9918
+\end{itemize}
+
+\vfill
+\center{\footnotesize \textcolor{lightgray}{Generated in \LaTeX \ | Available for validation via GitHub.}}
+
+\end{document}
